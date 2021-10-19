@@ -1,0 +1,1 @@
+(()=>{var r={466:r=>{r.exports={printFormat:function(){return"9"}}}},t={};function o(n){var e=t[n];if(void 0!==e)return e.exports;var s=t[n]={exports:{}};return r[n](s,s.exports,o),s.exports}(()=>{"use strict";const{printFormat:r}=o(466);console.log("sum",50),console.log("printFormat",r())})()})();

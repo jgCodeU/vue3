@@ -1,0 +1,13 @@
+/* .img-bg {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/nhlt.jpg");
+    background-size: auto 100%;
+} */
+
+.image-bg {
+    background-image: url("../img/cat.jpg");
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+  }

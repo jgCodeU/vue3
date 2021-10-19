@@ -1,0 +1,6 @@
+1.commonJS和ESmodule的引入
+2.本地跑起代码，必须使用webpack打包后，再在index.html文件中引入打包后的文件
+3.项目中的包管理，利用package.json文件
+4.创建package.json文件(npm init或npm init -y)
+5.局部安装webpack（分为开发时使用和生产时使用）（开发依赖、生产依赖）
+6.局部安装的原因：不同的项目，可能使用的工具版本不一样，需要针对每个项目来安装工具
