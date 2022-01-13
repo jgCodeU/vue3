@@ -15,6 +15,8 @@
 </template>
 
 <script>
+// 在ShowMessage.vue（子组件）中定义并使用props
+// 在App.vue（父组件）中向子组件的props传值
 import ShowMessage from './ShowMessage.vue'
 import MultRootElement from './MultRootElement.vue'
     export default {
