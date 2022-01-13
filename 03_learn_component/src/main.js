@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 // import App from './03_父组件向子组件传数据/App.vue'
 // import App from './04_子组件向父组件传递/App.vue'
 // import App from './05_商品页面切换/App.vue'
-import App from './06_provide-inject/App.vue'
+// import App from './06_provide-inject/App.vue'
+import App from './07_时间总线的使用/App.vue'
 console.log('App', App)
 createApp(App).mount('#app')
