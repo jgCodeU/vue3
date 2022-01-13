@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "push": "git add . && git commit -m '非父子组件通信' && git push -u origin  master"
   },
   "dependencies": {
     "core-js": "^3.6.5",
