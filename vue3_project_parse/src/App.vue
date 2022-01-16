@@ -6,11 +6,12 @@ console.log('App.vue')
 </script>
 
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" /> -->
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div class="shiftPage">
     <router-link to="/" >跳转Home页面</router-link>｜
-    <router-link to="/About" >跳转About页面</router-link>
+    <router-link to="/About" >跳转About页面</router-link>｜
+    <router-link to="/Setuptest" >跳转Setuptest页面</router-link>
   </div>
 
   <router-view></router-view>

@@ -92,5 +92,5 @@ export default router
 
 # Vue3生命周期
 
-
+setup在其他生命周期函数之前，也在data等之前
 
