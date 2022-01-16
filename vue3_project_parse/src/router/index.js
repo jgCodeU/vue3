@@ -21,4 +21,5 @@ const router = createRouter({
 })
 
 export default router
+console.log('router---index.js')
 

@@ -82,5 +82,15 @@ export default router
 
 #### （2）建立页面
 
-#### （3）修改App.vue文件
+#### （3）在main.js引入路由,修改App.vue文件
+
+
+
+在 <script setup> 语法中，我们使用引入的 ref 函数包裹数字，返回的 count 变量就是响应式的数据，使用 add 函数实现数字的修改。需要注意的是，对于 ref 返回的响应式数据，我们需要修改 .value 才能生效，而在 <script setup> 标签内定义的变量和函数，都可以在模板中直接使用。
+
+使用 Composition API 的逻辑来拆分代码，把一个功能相关的数据和方法都维护在一起。
+
+# Vue3生命周期
+
+
 

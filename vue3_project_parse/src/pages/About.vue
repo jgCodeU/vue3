@@ -2,10 +2,8 @@
     <div class="title">这里是About页面</div>
 </template>
 
-<script>
-    export default {
-        
-    }
+<script setup>
+    console.log('About.vue')
 </script>
 
 <style scoped>
