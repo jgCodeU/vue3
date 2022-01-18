@@ -13,12 +13,23 @@ export default {
 </script> -->
 
 <script setup>
-    import { onMounted, watch } from "vue";
+    import { onBeforeMount,onMounted, onBeforeUpdate, watch } from "vue";
     import Add from "../components/Add.vue";
+    // onBeforeMount
+    function onBM() {
+    console.log('Home---onBeforeMount')
+    }
+    onBeforeMount(onBM)
+    // onMounted
     function foo() {
-        console.log("Home---foo");
+        console.log("Home---onMounted");
     }
     onMounted(foo);
+    // onBeforeUpdate
+    function onBU() {
+        console.log('Home---onBeforeUpdate')
+    }
+    onBeforeUpdate(onBU)
     console.log("Home---setup");
 </script>
 
