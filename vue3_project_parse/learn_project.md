@@ -94,3 +94,7 @@ export default router
 
 setup在其他生命周期函数之前，也在data等之前
 
+https://juejin.cn/post/6945606524987244558
+
+# optionsAPI与compositionAPI混用
+
