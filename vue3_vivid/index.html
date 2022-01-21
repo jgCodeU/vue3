@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" href="/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue3_vivid</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>console.log('index.html---引入JS前')</script>
+    <script type="module" src="/src/main.js"></script>
+    <script>console.log('index.html---引入JS后')</script>
+  </body>
+</html>
+
+<!-- 1.入口文件是index.html -->
+<!-- 2.JavaScript文件的加载不会占用此文件代码的解析 -->
