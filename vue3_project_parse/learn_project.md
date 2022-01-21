@@ -15,7 +15,7 @@
 │   ├── components   
 │   │   └── HelloWorld.vue
 │   └── main.js          	入口
-└── vite.config.js vite		工程化配置文件
+└── vite.config.js        vite工程化配置文件
 ```
 
 
@@ -152,7 +152,7 @@ console.log('main.js--createApp--后')
 
 ESModule和CommonJS具体使用和原理之后再介绍。
 
-### （3）App.vue
+## 3.App.vue
 
 ```javascript
 createApp(App).use(router).mount('#app')
@@ -168,7 +168,7 @@ createApp(App).use(router).mount('#app')
 
 ![image-20220120014156200](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220120014156200.png)
 
-### （4）Home.vue（Vue3生命周期）
+## 4.Home.vue（Vue3生命周期）
 
 # Vue3生命周期
 
