@@ -10,8 +10,10 @@ console.log('App.vue')
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div class="shiftPage">
     <router-link to="/" >跳转Home页面</router-link>｜
-    <router-link to="/About" >跳转About页面</router-link>｜
-    <router-link to="/Setuptest" >跳转Setuptest页面</router-link>
+    <!-- <router-link to="/About" >跳转About页面</router-link>｜ -->
+    <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
+    <router-link to="/Vtransition" >跳转Vtransition页面</router-link>
+    <!-- <router-link to="/Vtransition" >跳转Vanimation页面</router-link> -->
   </div>
 
   <router-view></router-view>
