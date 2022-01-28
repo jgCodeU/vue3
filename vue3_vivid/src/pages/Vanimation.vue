@@ -4,10 +4,9 @@
     </div>
     <button @click="showDetail()">显示详情</button>
     <button @click="hideDetail()">隐藏详情</button>
-    <transition name="detail">
+    <transition name="bounce">
       <div v-show="ifShowDetail">
-        VanimationVanimationVanimationVanimationVanimationVanimationVanimation
-        <!-- <p>详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息</p> -->
+        <p>详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息</p>
       </div>
     </transition>
     
@@ -25,17 +24,36 @@
 </script>
 
 <style scoped>
-.detail-enter {
-  opacity: 0 !important;
+/* .bounce-enter-active {
+  animation: bounce-in 0.5s;
 }
-.detail-enter-active {
-  transition: opacity 1s;
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
 }
-.detail-leave-to {
-  opacity: 0;
+
+@keyframes bounce-in {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+} */
+
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
 }
-.detail-leave-active {
-  transition: opacity 1s;
+.bounce-leave-active {
+  animation: bounce-out 0.5s;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+@keyframes bounce-out {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(0); }
 }
 
 

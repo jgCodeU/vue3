@@ -12,11 +12,14 @@ console.log('App.vue')
     <router-link to="/" >跳转Home页面</router-link>｜
     <!-- <router-link to="/About" >跳转About页面</router-link>｜ -->
     <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
-    <router-link to="/Vtransition" >跳转Vtransition页面</router-link>
-    <!-- <router-link to="/Vtransition" >跳转Vanimation页面</router-link> -->
+    <!-- <router-link to="/Vtransition" >跳转Vtransition页面</router-link> -->
+    <router-link to="/Vanimation" >跳转Vanimation页面</router-link>
   </div>
-
-  <router-view></router-view>
+  
+  <!-- <router-view></router-view> -->
+  <transition name="slide">
+    <router-view></router-view>
+  </transition>
 </template>
 
 <style>
@@ -28,7 +31,10 @@ console.log('App.vue')
   color: #2c3e50;
   margin-top: 60px;
 }
-.shiftPage {
-
+.slide-enter-from {
+  opacity: 0;
+}
+.slide-enter-active {
+  transition: opacity .5s;
 }
 </style>
