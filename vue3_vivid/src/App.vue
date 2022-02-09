@@ -2,7 +2,17 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import { watch } from 'vue'
 console.log('App.vue')
+</script>
+<script>
+export default {
+  watch: {
+    $route(to, from){
+      console.log('路由跳转', to, from)
+    }
+  },
+}
 </script>
 
 <template>
@@ -12,7 +22,7 @@ console.log('App.vue')
     <router-link to="/" >跳转Home页面</router-link>｜
     <!-- <router-link to="/About" >跳转About页面</router-link>｜ -->
     <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
-    <!-- <router-link to="/Vtransition" >跳转Vtransition页面</router-link> -->
+    <router-link to="/Vtransition" >跳转Vtransition页面</router-link>｜
     <router-link to="/Vanimation" >跳转Vanimation页面</router-link>
   </div>
   

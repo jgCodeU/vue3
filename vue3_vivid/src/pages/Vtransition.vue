@@ -5,7 +5,7 @@
     <button @click="showDetail()">显示详情</button>
     <button @click="hideDetail()">隐藏详情</button>
     <transition name="detail">
-      <div v-show="ifShowDetail">
+      <div v-if="ifShowDetail">
         详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息
         <!-- <p>详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息详细信息</p> -->
       </div>
