@@ -46,9 +46,16 @@
             <button @click="showTab1Content">tab-1</button>
             <button @click="showTab2Content">tab-2</button>
         </div>
-        <transition name="statusContent">
+        <!-- <transition name="statusContent">
             <div class="statusContent-1" v-if="tabNum === 1">tab-1中显示内容111111111111</div>
             <div class="statusContent-2" v-else-if="tabNum === 2">tab-2中显示内容222222222222</div>
+        </transition> -->
+
+        <transition :name="statusContent_1">
+            <div class="statusContent-1" v-if="tabNum === 1">tab-1中显示内容111111111111</div>
+        </transition>   
+        <transition :name="statusContent_2">
+            <div class="statusContent-2" v-if="tabNum === 2">tab-2中显示内容222222222222</div>
         </transition>
     </div>
 
@@ -102,11 +109,21 @@
 
     // 切换区域显示内容
     let tabNum = ref(0)
+    let statusContent_1 = ref('1')
+    let statusContent_2 = ref('1')
     function showTab1Content() {
         tabNum.value = 1
+        // left-enter-from
+        statusContent_1.value = "left"
+        // right-leave-to
+        statusContent_2.value = "right"
     }
     function showTab2Content() {
         tabNum.value = 2
+        // left-leave-to
+        statusContent_1.value = "left"
+        // right-enter-from
+        statusContent_2.value = "right"
     }
 
     //卡片增删
@@ -261,14 +278,27 @@
     bottom: 40px;
 }
 
-.statusContent-enter-from,
-.statusContent-leave-to {
+.left-enter-from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(-200px);
 }
-.statusContent-enter-active,
-.statusContent-leave-active {
-    transition: all 2s;
+.right-enter-from {
+    opacity: 0;
+    transform: translateX(200px);
+}
+.left-leave-to {
+    opacity: 0;
+    transform: translateX(-200px);
+}
+.right-leave-to {
+    opacity: 0;
+    transform: translateX(200px);
+}
+.right-enter-active,
+.right-leave-active,
+.left-enter-active,
+ .left-leave-active{
+    transition: all 1s;
 }
 
 /* ***************卡片增删*************** */
