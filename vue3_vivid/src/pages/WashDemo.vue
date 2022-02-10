@@ -39,9 +39,28 @@
     <div class="runningStatus">
         <h1>切换区域显示内容</h1>
         <div class="tabContent">
-            <button>tab-1</button>
-            <button>tab-2</button>
+            <button @click="showTab1Content">tab-1</button>
+            <button @click="showTab2Content">tab-2</button>
         </div>
+        <transition name="statusContent">
+            <div class="statusContent-1" v-if="tabNum === 1">tab-1中显示内容111111111111</div>
+            <div class="statusContent-2" v-else-if="tabNum === 2">tab-2中显示内容222222222222</div>
+        </transition>
+    </div>
+
+    <!-- ****************卡片增删*************** -->
+    <div class="cardsNumChange">
+        <h1>卡片增删</h1>
+        <div class="cardBtnContent">
+            <button @click="addCard">增加卡片</button>
+            <button @click="deleteCard">删除卡片</button>
+        </div>
+        <div class="cardsContent">
+            <transition-group name="cardList">
+                <div class="cardList" v-for="(item, index) in cardList" :key="item" @click="deleteInCard(index)">{{cardList[index]}}</div>
+            </transition-group>
+        </div>
+        
     </div>
 
     <div class="block"></div>
@@ -60,7 +79,7 @@
     }
 
 
-    //弹框提示
+    // 弹框提示
     let ifShowTips = ref(false)
     function showTips() {
         ifShowTips.value = (true)
@@ -68,10 +87,36 @@
     function closeBtn() {
         ifShowTips.value = false
     }
+
+    // 切换区域显示内容
+    let tabNum = ref(0)
+    function showTab1Content() {
+        tabNum.value = 1
+    }
+    function showTab2Content() {
+        tabNum.value = 2
+    }
+
+    //卡片增删
+    let cardList = ref([1, 2, 3, 4, 5, 6])
+    function randomIndex() {
+        return Math.floor(Math.random() * cardList.value.length)
+    }
+    function addCard() {
+        cardList.value.push(cardList.value.length + 1)
+    }
+    function deleteCard() {
+        cardList.value.splice(randomIndex(), 1)
+    }
+    function deleteInCard(index) {
+        cardList.value.splice(index, 1)
+    }
+
+
 </script>
 
 <style scoped>
-/* 启动暂停 */
+/* ***************启动暂停*************** */
 .runningPause {
     position: relative;
     margin: 0 auto;
@@ -105,7 +150,7 @@
     transition: opacity .5s;
 }
 
-/* 进度条 */
+/* ***************进度条*************** */
 .progress {
     position: relative;
     margin: 0 auto;
@@ -116,7 +161,7 @@
     /* background-color: rgba(39, 108, 255, 0.913); */
 }
 
-/* 弹框提示 */
+/* ***************弹框提示*************** */
 .showTips {
     position: relative;
     margin: 0 auto;
@@ -151,7 +196,7 @@
     transition: opacity .5s;
 }
 
-/* 切换区域显示内容 */
+/* ***************切换区域显示内容*************** */
 .runningStatus {
     position: relative;
     margin: 0 auto;
@@ -160,6 +205,78 @@
     height: 210px;
     border: 2px solid black;
 }
+.tabContent {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: pink;
+}
+.statusContent-1,
+.statusContent-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+}
+
+.statusContent-enter-from,
+.statusContent-leave-to {
+    opacity: 0;
+}
+.statusContent-enter-active,
+.statusContent-leave-active {
+    transition: opacity .5s;
+}
+
+/* ***************卡片增删*************** */
+.cardsNumChange {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 600px;
+    height: 400px;
+    border: 2px solid black;
+    overflow: scroll;
+}
+.cardBtnContent {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: pink;
+}
+.cardsContent {
+    position: relative;
+    width: 130px;
+    margin: 0 auto;
+    /* background-color: skyblue; */
+}
+.cardList {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+    transition: all .8s ease;
+    background-color: pink;
+}
+.cardList-enter-from,
+.cardList-leave-to {
+    opacity: 0;
+    transform: translateY(30px);
+}
+/* .cardList-enter-active,
+.cardList-leave-active {
+    transition: all .5s;
+} */
+.cardList-leave-active {
+    position: absolute;
+}
+
 
 /* 下方留白 */
 .block {
