@@ -15,6 +15,10 @@
     <div class="progress">
         <h1>进度条</h1>
         <!-- 无论进度条的实际状态如何，都从0开始上涨到实际状态处 -->
+        <button @click="resetProgress">复位进度条</button>
+        <div class="progressStatus" :class="{downloadProgress: ifStartDownload}" @click="downloadCard">
+            <span class="startDownloadCard" v-if="!ifStartDownload">开始下载</span>
+        </div>
     </div>
 
     <!-- ****************弹框提示*************** -->
@@ -50,7 +54,7 @@
 
     <!-- ****************卡片增删*************** -->
     <div class="cardsNumChange">
-        <h1>卡片增删</h1>
+        <h1>卡片增删(点击卡片也可删除)</h1>
         <div class="cardBtnContent">
             <button @click="addCard">增加卡片</button>
             <button @click="deleteCard">删除卡片</button>
@@ -78,6 +82,14 @@
         isRunning.value = false
     }
 
+    //进度条
+    let ifStartDownload = ref(false)
+    function downloadCard() {
+        ifStartDownload.value = true
+    }
+    function resetProgress() {
+        ifStartDownload.value = false
+    }
 
     // 弹框提示
     let ifShowTips = ref(false)
@@ -160,6 +172,33 @@
     border: 2px solid black;
     /* background-color: rgba(39, 108, 255, 0.913); */
 }
+.startDownloadCard {
+    line-height: 50px;
+}
+.progressStatus {
+    /* display: inline-block; */
+    width: 350px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: gray;
+    /* transition: 1s length ease; */
+}
+.downloadProgress {
+    transform-origin: left;
+    background-color: rgba(56, 95, 255, 0.762);
+    animation: downloadStatus 3s linear 0s 1 normal forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes downloadStatus {
+    from {transform: scaleX(0);}
+    to {transform: scaleX(1); background-color: rgba(56, 95, 255, 0.762);}
+
+    /* from {width: 0;}
+    to {width: 350px; background-color: rgba(39, 108, 255, 0.913);} */
+}
+
 
 /* ***************弹框提示*************** */
 .showTips {
@@ -225,10 +264,11 @@
 .statusContent-enter-from,
 .statusContent-leave-to {
     opacity: 0;
+    transform: translateX(50px);
 }
 .statusContent-enter-active,
 .statusContent-leave-active {
-    transition: opacity .5s;
+    transition: all 2s;
 }
 
 /* ***************卡片增删*************** */
