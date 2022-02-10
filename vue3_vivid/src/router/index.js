@@ -4,6 +4,7 @@ import  About from '../pages/About.vue'
 import  Setuptest from '../pages/Setuptest.vue'
 import Vtransition from '../pages/Vtransition.vue'
 import Vanimation from '../pages/Vanimation.vue'
+import TranGroup from '../pages/TranGroup.vue'
 
 const routes = [
     {
@@ -30,7 +31,12 @@ const routes = [
         path: '/Vanimation',
         name: 'Vanimation',
         component: Vanimation
-    }
+    },
+    {
+        path: '/TranGroup',
+        name: 'TranGroup',
+        component: TranGroup
+    },
 ]
 
 const router = createRouter({
