@@ -5,6 +5,7 @@ import  Setuptest from '../pages/Setuptest.vue'
 import Vtransition from '../pages/Vtransition.vue'
 import Vanimation from '../pages/Vanimation.vue'
 import TranGroup from '../pages/TranGroup.vue'
+import WashDemo from '../pages/WashDemo.vue'
 
 const routes = [
     {
@@ -36,6 +37,11 @@ const routes = [
         path: '/TranGroup',
         name: 'TranGroup',
         component: TranGroup
+    },
+    {
+        path: '/WashDemo',
+        name: 'WashDemo',
+        component: WashDemo
     },
 ]
 

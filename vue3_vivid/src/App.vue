@@ -24,7 +24,8 @@ export default {
     <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
     <router-link to="/Vtransition" >跳转Vtransition页面</router-link>｜
     <router-link to="/Vanimation" >跳转Vanimation页面</router-link>|
-    <router-link to="/TranGroup">列表过渡</router-link>
+    <router-link to="/TranGroup">列表过渡</router-link>｜
+    <router-link to="/WashDemo">项目应用示例</router-link>
   </div>
   
   <router-view></router-view>
