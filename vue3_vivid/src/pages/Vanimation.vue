@@ -39,10 +39,10 @@
 
 
 .bounce-enter-active {
-  animation: bounce-in 0.5s;
+  animation: bounce-in 0.5s ease;
 }
 .bounce-leave-active {
-  animation: bounce-out 0.5s;
+  animation: bounce-out 0.5s ease;
 }
 
 @keyframes bounce-in {

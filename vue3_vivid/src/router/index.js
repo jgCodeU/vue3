@@ -6,6 +6,8 @@ import Vtransition from '../pages/Vtransition.vue'
 import Vanimation from '../pages/Vanimation.vue'
 import TranGroup from '../pages/TranGroup.vue'
 import WashDemo from '../pages/WashDemo.vue'
+import CssTransition from '../pages/CssTransition.vue'
+import VanimationTransition from '../pages/VanimationTransition.vue'
 
 const routes = [
     {
@@ -43,6 +45,17 @@ const routes = [
         name: 'WashDemo',
         component: WashDemo
     },
+    {
+        path: '/CssTransition',
+        name: 'CssTransition',
+        component: CssTransition
+    },
+    {
+        path: '/VanimationTransition',
+        name: 'CssTransiVanimationTransitiontion',
+        component: VanimationTransition
+    },
+    
 ]
 
 const router = createRouter({

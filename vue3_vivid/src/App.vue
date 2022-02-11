@@ -19,13 +19,16 @@ export default {
   <img alt="Vue logo" src="./assets/logo.png" />
   <!-- <HelloWorld msg="Hello Vue 3 + Vite" /> -->
   <div class="shiftPage">
-    <router-link to="/" >跳转Home页面</router-link>｜
+    <router-link to="/" class="navigation">跳转Home页面</router-link>
     <!-- <router-link to="/About" >跳转About页面</router-link>｜ -->
     <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
-    <router-link to="/Vtransition" >跳转Vtransition页面</router-link>｜
-    <router-link to="/Vanimation" >跳转Vanimation页面</router-link>|
-    <router-link to="/TranGroup">列表过渡</router-link>｜
-    <router-link to="/WashDemo">项目应用示例</router-link>
+    <router-link to="/CssTransition" class="navigation">CssTransition</router-link>
+    <router-link to="/Vtransition" class="navigation">跳转Vtransition页面</router-link>
+    <router-link to="/Vanimation" class="navigation">跳转Vanimation页面</router-link> 
+    <router-link to="/VanimationTransition" class="navigation">跳转VanimationTransition页面</router-link>
+    <router-link to="/TranGroup" class="navigation">列表过渡</router-link>
+    <router-link to="/WashDemo" class="navigation">项目应用示例</router-link>
+    
   </div>
   
   <router-view></router-view>
@@ -43,10 +46,25 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.shiftPage {
+  border-bottom: dashed 2px gray;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.navigation {
+  /* width: 100px; */
+  display: inline-block;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  line-height: 50px;
+  background-color: rgb(220, 153, 111);
+}
 .slide-enter-from {
   opacity: 0;
 }
 .slide-enter-active {
   transition: opacity .5s;
 }
+
 </style>

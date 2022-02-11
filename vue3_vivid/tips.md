@@ -1,6 +1,24 @@
 # 1.transition
 
+4个属性
+
+transition-property：指定应用过渡属性的名称，默认none（none、all、IDENT）。
+
+transition-duration：过渡持续时间默认0s（单位：s、ms）。
+
+transition-timing-function：过渡过程应用的函数。
+
+transition-delay：规定了在过渡效果开始作用之前需要等待的时间。
+
+具体用法：在元素初始状态时，写上transition的各个属性，当元素的某个样式变化时，根据transition展示过渡效果
+
+参考资料：https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition
+
+
+
 # 2.animation
+
+animation: name duration timing-function delay iteration-count direction fill-mode;
 
 animation-name：动画名称，代表一个由@keyframes定义的动画序列
 
@@ -21,6 +39,10 @@ animation-play-state：标志一个动画处于暂停或者运行中（paused、
 
 
 @keyframe：定义动画序列中的关键帧，控制动画的变换（中间步骤）。每个 `@keyframes` 规则包含多个关键帧，也就是一段样式块语句，每个关键帧有一个百分比值作为名称，代表在动画进行中，在哪个阶段触发这个帧所包含的样式。
+
+
+
+特点：可定义元素变化过程中的多个中间状态，方便实现动画的连续播放，使用加灵活。
 
 # 3.transform
 
