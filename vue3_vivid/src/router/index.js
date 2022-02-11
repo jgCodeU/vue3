@@ -8,7 +8,7 @@ import TranGroup from '../pages/TranGroup.vue'
 import WashDemo from '../pages/WashDemo.vue'
 import CssTransition from '../pages/CssTransition.vue'
 import VanimationTransition from '../pages/VanimationTransition.vue'
-
+import VtransformMode from '../pages/VtransformMode.vue'
 const routes = [
     {
         path: '/', //路由名称（'/'表示默认显示此页面）
@@ -52,9 +52,15 @@ const routes = [
     },
     {
         path: '/VanimationTransition',
-        name: 'CssTransiVanimationTransitiontion',
+        name: 'VanimationTransition',
         component: VanimationTransition
     },
+    {
+        path: '/VtransformMode',
+        name: 'VtransformMode',
+        component: VtransformMode
+    },
+    
     
 ]
 

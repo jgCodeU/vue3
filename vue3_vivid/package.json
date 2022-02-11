@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "push": "git add . && git commit -m '动画内容补充' && git push -u origin  master"
+    "push": "git add . && git commit -m 'transform-mode' && git push -u origin  master"
   },
   "dependencies": {
     "vue": "^3.2.25"
