@@ -12,6 +12,7 @@
         </transition>
     </div>
 
+    <!-- ****************下载进度条*************** -->
     <div class="progress">
         <h1>进度条</h1>
         <!-- 无论进度条的实际状态如何，都从0开始上涨到实际状态处 -->
@@ -67,7 +68,7 @@
             <button @click="deleteCard">删除卡片</button>
         </div>
         <div class="cardsContent">
-            <transition-group name="cardList">
+            <transition-group name="cardList" appear="true">
                 <div class="cardList" v-for="(item, index) in cardList" :key="item" @click="deleteInCard(index)">{{cardList[index]}}</div>
             </transition-group>
         </div>

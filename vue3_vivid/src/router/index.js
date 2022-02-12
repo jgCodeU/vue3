@@ -9,6 +9,9 @@ import WashDemo from '../pages/WashDemo.vue'
 import CssTransition from '../pages/CssTransition.vue'
 import VanimationTransition from '../pages/VanimationTransition.vue'
 import VtransformMode from '../pages/VtransformMode.vue'
+import VcomponentShift from '../pages/VcomponentShift.vue'
+
+
 const routes = [
     {
         path: '/', //路由名称（'/'表示默认显示此页面）
@@ -60,6 +63,13 @@ const routes = [
         name: 'VtransformMode',
         component: VtransformMode
     },
+    {
+        path: '/VcomponentShift',
+        name: 'VcomponentShift',
+        component: VcomponentShift
+    },
+    
+    
     
     
 ]
