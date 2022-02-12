@@ -1,7 +1,7 @@
 <template>
 <!-- 
-animation官网：
-https://animate.style/
+animation官网：https://animate.style/
+GitHub：https://github.com/animate-css/animate.css
 注意：进入和离开用不同的动画！！！
  -->
     <div>

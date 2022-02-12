@@ -1,7 +1,7 @@
 <template>
 <!-- 
-animation官网：
-https://animate.style/
+animation官网：https://animate.style/
+GitHub：https://github.com/animate-css/animate.css
 注意：
 (1)进入和离开用不同的动画！！！
 (2)在使用自定义class时，需要加上animate__animated，否则看不见过渡效果，因为需要animate__animated指定过渡时间等
