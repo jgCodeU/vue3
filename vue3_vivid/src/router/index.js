@@ -14,6 +14,8 @@ import AnimationCss from '../pages/AnimationCss/AnimationCss.vue'
 import DiyTransformClass from '../pages/AnimationCss/DiyTransformClass.vue'
 import Gsap from '../pages/gsap/Gsap.vue'
 import JsGos from '../pages/gsap/JsGos.vue'
+import Count from '../pages/gsap/Count.vue'
+
 
 
 
@@ -93,6 +95,12 @@ const routes = [
         name: 'JsGos',
         component: JsGos
     },
+    {
+        path: '/Count',
+        name: 'Count',
+        component: Count
+    },
+    
     
     
     

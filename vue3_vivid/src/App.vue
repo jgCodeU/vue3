@@ -32,6 +32,8 @@ export default {
     <router-link to="/DiyTransformClass" class="navigation">DiyTransformClass</router-link>
     <router-link to="/JsGos" class="navigation">JsGos(JS钩子)</router-link>
     <router-link to="/gsap" class="navigation">Gsap</router-link>
+    <router-link to="/Count" class="navigation">Count</router-link>
+    
     
     
     <router-link to="/TranGroup" class="navigation">列表过渡</router-link>
