@@ -27,7 +27,7 @@ GitHub：https://github.com/greensock/GSAP
 
 <script setup>
   import { ref } from 'vue'
-  // import gsap from 'gsap'
+  import gsap from 'gsap'
 
   let ifShowDetail = ref(false)
   function showDetail() {
@@ -42,11 +42,11 @@ GitHub：https://github.com/greensock/GSAP
   }
   function enter(el, done) {
     console.log('enter')
-    // gsap.from(el, {
-    //   scale: 0,
-    //   x: -200,
-    //   onComplete: done
-    // })
+    gsap.from(el, {
+      scale: 0,
+      x: -200,
+      onComplete: done
+    })
 
   }
   function afterEnter() {
@@ -60,11 +60,11 @@ GitHub：https://github.com/greensock/GSAP
   }
   function leave(el, done) {
     console.log('leave')
-    // gsap.to(el, {
-    //   scale: 0,
-    //   x: 200,
-    //   onComplete: done
-    // })
+    gsap.to(el, {
+      scale: 0,
+      x: 200,
+      onComplete: done
+    })
   }
   function afterLeave() {
     console.log('afterLeave')
