@@ -10,6 +10,8 @@ import CssTransition from '../pages/CssTransition.vue'
 import VanimationTransition from '../pages/VanimationTransition.vue'
 import VtransformMode from '../pages/VtransformMode.vue'
 import VcomponentShift from '../pages/VcomponentShift.vue'
+import AnimationCss from '../pages/AnimationCss/AnimationCss.vue'
+import DiyTransformClass from '../pages/AnimationCss/DiyTransformClass.vue'
 
 
 const routes = [
@@ -68,6 +70,18 @@ const routes = [
         name: 'VcomponentShift',
         component: VcomponentShift
     },
+    {
+        path: '/AnimationCss',
+        name: 'AnimationCss',
+        component: AnimationCss
+    },
+    {
+        path: '/DiyTransformClass',
+        name: 'DiyTransformClass',
+        component: DiyTransformClass
+    },
+    
+    
     
     
     

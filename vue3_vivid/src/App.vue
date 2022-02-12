@@ -28,6 +28,9 @@ export default {
     <router-link to="/VanimationTransition" class="navigation">跳转VanimationTransition页面</router-link>
     <router-link to="/VtransformMode" class="navigation">VtransformMode</router-link>
     <router-link to="/VcomponentShift" class="navigation">VcomponentShift</router-link>
+    <router-link to="/AnimationCss" class="navigation">AnimationCss</router-link>
+    <router-link to="/DiyTransformClass" class="navigation">DiyTransformClass</router-link>
+    
     
     <router-link to="/TranGroup" class="navigation">列表过渡</router-link>
     <router-link to="/WashDemo" class="navigation">项目应用示例</router-link>
