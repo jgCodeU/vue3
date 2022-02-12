@@ -12,6 +12,9 @@ import VtransformMode from '../pages/VtransformMode.vue'
 import VcomponentShift from '../pages/VcomponentShift.vue'
 import AnimationCss from '../pages/AnimationCss/AnimationCss.vue'
 import DiyTransformClass from '../pages/AnimationCss/DiyTransformClass.vue'
+import Gsap from '../pages/gsap/Gsap.vue'
+import JsGos from '../pages/gsap/JsGos.vue'
+
 
 
 const routes = [
@@ -80,6 +83,17 @@ const routes = [
         name: 'DiyTransformClass',
         component: DiyTransformClass
     },
+    {
+        path: '/Gsap',
+        name: 'Gsap',
+        component: Gsap
+    },
+    {
+        path: '/JsGos',
+        name: 'JsGos',
+        component: JsGos
+    },
+    
     
     
     

@@ -30,6 +30,8 @@ export default {
     <router-link to="/VcomponentShift" class="navigation">VcomponentShift</router-link>
     <router-link to="/AnimationCss" class="navigation">AnimationCss</router-link>
     <router-link to="/DiyTransformClass" class="navigation">DiyTransformClass</router-link>
+    <router-link to="/JsGos" class="navigation">JsGos(JS钩子)</router-link>
+    <router-link to="/gsap" class="navigation">Gsap</router-link>
     
     
     <router-link to="/TranGroup" class="navigation">列表过渡</router-link>
