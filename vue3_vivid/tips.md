@@ -44,7 +44,15 @@ animation-play-state：标志一个动画处于暂停或者运行中（paused、
 
 特点：可定义元素变化过程中的多个中间状态，方便实现动画的连续播放，使用加灵活。
 
+
+
+具体用法：在某个class上加上animation属性，表示从其他样式转变为这个样式需要经历的动画过程。
+
 # 3.transform
+
+使用transition和animation，需要自己控制何时添加class，何时去除class。
+
+
 
 # 4.项目应用
 

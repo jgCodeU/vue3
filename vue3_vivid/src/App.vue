@@ -23,6 +23,7 @@ export default {
     <!-- <router-link to="/About" >跳转About页面</router-link>｜ -->
     <!-- <router-link to="/Setuptest" >跳转Setuptest页面</router-link>| -->
     <router-link to="/CssTransition" class="navigation">CssTransition</router-link>
+    <router-link to="/CssAnimation" class="navigation">CssAnimation</router-link>
     <router-link to="/Vtransition" class="navigation">跳转Vtransition页面</router-link>
     <router-link to="/Vanimation" class="navigation">跳转Vanimation页面</router-link> 
     <router-link to="/VanimationTransition" class="navigation">跳转VanimationTransition页面</router-link>

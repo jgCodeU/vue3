@@ -7,6 +7,7 @@ import Vanimation from '../pages/Vanimation.vue'
 import TranGroup from '../pages/TranGroup.vue'
 import WashDemo from '../pages/WashDemo.vue'
 import CssTransition from '../pages/CssTransition.vue'
+import CssAnimation from '../pages/CssAnimation.vue'
 import VanimationTransition from '../pages/VanimationTransition.vue'
 import VtransformMode from '../pages/VtransformMode.vue'
 import VcomponentShift from '../pages/VcomponentShift.vue'
@@ -15,6 +16,7 @@ import DiyTransformClass from '../pages/AnimationCss/DiyTransformClass.vue'
 import Gsap from '../pages/gsap/Gsap.vue'
 import JsGos from '../pages/gsap/JsGos.vue'
 import Count from '../pages/gsap/Count.vue'
+
 
 
 
@@ -100,6 +102,12 @@ const routes = [
         name: 'Count',
         component: Count
     },
+    {
+        path: '/CssAnimation',
+        name: 'CssAnimation',
+        component: CssAnimation
+    },
+    
     
     
     

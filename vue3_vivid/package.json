@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "push": "git add . && git commit -m 'gsap' && git push -u origin  master"
+    "push": "git add . && git commit -m 'CssAnimation' && git push -u origin  master"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
