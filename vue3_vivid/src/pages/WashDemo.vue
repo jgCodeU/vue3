@@ -68,8 +68,11 @@
             <button @click="deleteCard">删除卡片</button>
         </div>
         <div class="cardsContent">
-            <transition-group name="cardList" appear="true">
-                <div class="cardList" v-for="(item, index) in cardList" :key="item" @click="deleteInCard(index)">{{cardList[index]}}</div>
+            <transition-group name="cardList" appear="true"
+                              @before-enter="beforeEnter"
+                              @enter="enter"
+                              @leave="leave">
+                <div class="cardList" v-for="(item, index) in cardList" :key="item" @click="deleteInCard(index)" :data-index="index">{{cardList[index]}}</div>
             </transition-group>
         </div>
         
@@ -80,6 +83,7 @@
 
 <script setup>
     import {ref} from "vue"
+    import gsap from "gsap";
 
     // 启动、暂停切换
     let isRunning = ref(true)
@@ -129,6 +133,26 @@
 
     //卡片增删
     let cardList = ref([1, 2, 3, 4, 5, 6])
+    function beforeEnter(el) {
+        el.style.opacity = 0;
+        // el.style.height = 0;
+    }
+    function enter(el, done) {
+        gsap.to(el, {
+          opacity: 1,
+        //   height: "1.5em",
+          delay: el.dataset.index * 0.1,
+          onComplete: done
+        })
+    }
+    function leave(el, done) {
+        gsap.to(el, {
+          opacity: 0,
+          height: 0,
+          delay: el.dataset.index * 0.1,
+          onComplete: done
+        })
+    }
     function randomIndex() {
         return Math.floor(Math.random() * cardList.value.length)
     }
@@ -332,7 +356,7 @@
     height: 50px;
     display: inline-block;
     margin: 5px;
-    transition: all .8s ease;
+    transition: all .5s ease;
     background-color: pink;
 }
 .cardList-enter-from,

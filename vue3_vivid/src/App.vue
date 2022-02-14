@@ -38,6 +38,8 @@ export default {
     
     
     <router-link to="/TranGroup" class="navigation">列表过渡</router-link>
+    <router-link to="/VTranGroupList" class="navigation">列表交错过渡</router-link>
+    
     <router-link to="/WashDemo" class="navigation">项目应用示例</router-link>
     
   </div>

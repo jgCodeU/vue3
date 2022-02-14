@@ -16,6 +16,7 @@ import DiyTransformClass from '../pages/AnimationCss/DiyTransformClass.vue'
 import Gsap from '../pages/gsap/Gsap.vue'
 import JsGos from '../pages/gsap/JsGos.vue'
 import Count from '../pages/gsap/Count.vue'
+import VTranGroupList from '../pages/VTranGroupList.vue'
 
 
 
@@ -107,6 +108,13 @@ const routes = [
         name: 'CssAnimation',
         component: CssAnimation
     },
+    {
+        path: '/VTranGroupList',
+        name: 'VTranGroupList',
+        component: VTranGroupList
+    },
+    
+    
     
     
     
