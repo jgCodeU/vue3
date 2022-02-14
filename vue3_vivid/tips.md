@@ -420,7 +420,19 @@ GitHub：https://github.com/animate-css/animate.css
 </style>
 ```
 
+![image-20220214110716496](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214110716496.png)
+
+
+
+![image-20220214110801019](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214110801019.png)
+
 方式二：直接使用animate库提供的类。
+
+![image-20220214111411751](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214111411751.png)
+
+![image-20220214111509308](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214111509308.png)
+
+
 
 ```javascript
 <template>
@@ -466,7 +478,11 @@ GitHub：https://github.com/animate-css/animate.css
 </style>
 ```
 
-## JavaScript钩子：
+### （2）gsap：
+
+#### JavaScript钩子：
+
+JavaScript钩子可以帮助我们监听动画执行到哪个阶段了。
 
 ```javascript
 <template>
@@ -524,9 +540,6 @@ GitHub：https://github.com/animate-css/animate.css
   function leaveCancelled() {
     console.log('leaveCancelled')
   }
-  // function xxxx() {
-  //   console.log('xxxx')
-  // }
 
 </script>
 
@@ -546,6 +559,143 @@ GitHub：https://github.com/animate-css/animate.css
 }
 </style>
 ```
+
+![image-20220214111631480](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214111631480.png)
+
+
+
+单纯使用css来实现动画时，动画的参数（动画时长等）是固定的。
+
+使用JavaScript来实现一些动画可以将动画参数设置成变量。
+
+当我们希望使用JavaScript实现一些动画效果时，我们可以选择使用gsap库来完成。
+
+gsap可以通过JavaScript为CSS属性、SVG、Canvas等设置动画，并且是浏览器兼容的。
+
+#### gsap使用：
+
+（1）安装
+
+```
+npm install gsap
+```
+
+（2）在页面中引入
+
+![image-20220214123834740](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214123834740.png)
+
+（3）编写代码
+
+![image-20220214123910531](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214123910531.png)
+
+
+
+```javascript
+<template>
+<!-- 
+官网：https://greensock.com/
+GitHub：https://github.com/greensock/GSAP
+注意：
+
+ -->
+    <div>
+        这是Gsap页面
+    </div>
+    <button @click="showDetail()">显示详情</button>
+    <button @click="hideDetail()">隐藏详情</button>
+    <transition @before-enter="beforeEnter"
+                @enter="enter"
+                @after-enter="afterEnter"
+                @enter-cancelled="enterCancelled"
+                @before-leave="beforeLeave"
+                @leave="leave"
+                @after-leave="afterLeave"
+                @leave-cancelled="leaveCancelled">
+      <div v-if="ifShowDetail">
+        Gsap-Gsap-Gsap-Gsap-Gsap-Gsap-Gsap-Gsap-Gsap-Gsap-Gsap
+      </div>
+    </transition>
+    
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+  import gsap from 'gsap'
+
+  let ifShowDetail = ref(false)
+  function showDetail() {
+    ifShowDetail.value = true
+  }
+  function hideDetail() {
+    ifShowDetail.value = false
+  }
+  // 动画生命周期
+  function beforeEnter() {
+    console.log('beforeEnter')
+  }
+  function enter(el, done) {
+    console.log('enter')
+    gsap.from(el, {
+      scale: 0,
+      x: -200,
+      onComplete: done
+    })
+
+  }
+  function afterEnter() {
+    console.log('afterEnter')
+  }
+  function enterCancelled() {
+    console.log('enterCancelled')
+  }
+  function beforeLeave() {
+    console.log('beforeLeave')
+  }
+  function leave(el, done) {
+    console.log('leave')
+    gsap.to(el, {
+      scale: 0,
+      x: 200,
+      onComplete: done
+    })
+  }
+  function afterLeave() {
+    console.log('afterLeave')
+  }
+  function leaveCancelled() {
+    console.log('leaveCancelled')
+  }
+</script>
+
+<style scoped>
+.detail-enter-from {
+  opacity: 0 ;
+}
+.detail-leave-to {
+  opacity: 0;
+}
+.detail-enter-active {
+}
+.detail-leave-active {
+}
+</style>
+```
+
+#### 注意：
+
+（1）当使用JavaScript来执行过渡动画时，在 enter 和 leave 钩子中必须使用 done 进行回调。否则，它们将被同步调用，过渡会立即完成。
+
+![image-20220214130532484](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214130532484.png)
+
+（2）添加 :css="false" 也会让 Vue 会跳过 CSS 的检测，除了性能略高之外，这也可以避免过渡过程中受到 CSS 规则的意外影响。
+
+![image-20220214130615240](/Users/hujianguo/Library/Application Support/typora-user-images/image-20220214130615240.png)
+
+
+
+
+
+
 
 
 
