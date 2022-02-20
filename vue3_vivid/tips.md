@@ -108,9 +108,9 @@ animation-iteration-count：动画播放次数（如果指定了多个值，每�
 
 animation-direction：动画播放顺序（normal、alternate、reverse、alternate- reverse）
 
-animation-fill-mode：
+animation-fill-mode：设置CSS动画在执行之前和之后如何将样式应用于其目标。
 
-animation-play-state：标志一个动画处于暂停或者运行中（paused、running）
+animation-play-state：标志/控制一个动画处于暂停或者运行中（paused、running）
 
 @keyframe：定义动画序列中的关键帧，控制动画的变换（中间步骤）。每个 `@keyframes` 规则包含多个关键帧，也就是一段样式块语句，每个关键帧有一个百分比值作为名称，代表在动画进行中，在哪个阶段触发这个帧所包含的样式。
 

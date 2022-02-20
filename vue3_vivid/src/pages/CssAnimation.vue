@@ -28,6 +28,7 @@
         background-color: pink;
         animation: blockAnimation 2s ease 0s 1 normal forwards;
         /* animation: blockAnimation 3s linear 0s 1 normal forwards; */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     }
     @keyframes blockAnimation {
         /* from {opacity: 0;}

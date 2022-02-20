@@ -19,7 +19,7 @@
         margin: 0 auto;
         margin-top:10px ;
         background-color: skyblue;
-        /* transition: all 1s ease 0s; */
+        transition: all 1s ease 0s;
         /* transition: background-color 1s ease 0s; */
         /* transition: width 1s ease 0s; */
     }

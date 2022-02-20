@@ -71,7 +71,8 @@
             <transition-group name="cardList" appear="true"
                               @before-enter="beforeEnter"
                               @enter="enter"
-                              @leave="leave">
+                              @leave="leave"
+                              :css="false">
                 <div class="cardList" v-for="(item, index) in cardList" :key="item" @click="deleteInCard(index)" :data-index="index">{{cardList[index]}}</div>
             </transition-group>
         </div>
@@ -141,18 +142,21 @@
         gsap.to(el, {
           opacity: 1,
         //   height: "1.5em",
-          delay: el.dataset.index * 0.1,
+          delay: el.dataset.index * 0.2,
           onComplete: done
         })
     }
-    function leave(el, done) {
-        gsap.to(el, {
-          opacity: 0,
-          height: 0,
-          delay: el.dataset.index * 0.1,
-          onComplete: done
-        })
+    function beforeLeave (el, done) {
+        el.style.position = 'absolute'
     }
+    // function leave(el, done) {
+    //     gsap.to(el, {
+    //       opacity: 0,
+    //     //   height: 0,
+    //     //   delay: el.dataset.index * 0.05,
+    //       onComplete: done
+    //     })
+    // }
     function randomIndex() {
         return Math.floor(Math.random() * cardList.value.length)
     }
@@ -359,11 +363,11 @@
     transition: all .5s ease;
     background-color: pink;
 }
-.cardList-enter-from,
+/* .cardList-enter-from,
 .cardList-leave-to {
     opacity: 0;
     transform: translateY(30px);
-}
+} */
 /* .cardList-enter-active,
 .cardList-leave-active {
     transition: all .5s;
