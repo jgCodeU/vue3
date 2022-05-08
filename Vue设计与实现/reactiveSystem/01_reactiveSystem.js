@@ -44,3 +44,13 @@ function track(target, key) {
 }
 
 // trigger执行set中的副作用函数
+function trigger(target ,key,) {
+    const depsMap = bucket.get(target)
+    if(!depsMap) return
+    const effects = depsMap.get(key)
+    if(effects) {
+        effects.array.forEach(fn => 
+            fn()
+        );
+    }
+}
